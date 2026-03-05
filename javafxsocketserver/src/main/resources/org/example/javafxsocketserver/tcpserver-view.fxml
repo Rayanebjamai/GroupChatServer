@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="400.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.javafxsocketserver.Controller">
+
+    <children>
+
+        <!-- Header -->
+        <AnchorPane prefHeight="50.0"
+                    style="-fx-background-color: green;"
+                    AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+
+            <children>
+
+                <Label text="TCP Chat Server"
+                       style="-fx-text-fill: white; -fx-font-weight: bold;"
+                       AnchorPane.leftAnchor="130.0"
+                       AnchorPane.topAnchor="12.0">
+
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+
+                </Label>
+
+            </children>
+
+        </AnchorPane>
+
+
+        <!-- Server Log Label -->
+        <Label text="Server Log"
+               style="-fx-font-weight: bold;"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.topAnchor="70.0"/>
+
+
+        <!-- Server Log List -->
+        <ListView fx:id="serverLog"
+                  prefHeight="250.0"
+                  AnchorPane.leftAnchor="20.0"
+                  AnchorPane.rightAnchor="20.0"
+                  AnchorPane.topAnchor="100.0"/>
+
+
+        <!-- Users Label -->
+        <Label text="Connected Users"
+               style="-fx-font-weight: bold;"
+               AnchorPane.leftAnchor="20.0"
+               AnchorPane.topAnchor="360.0"/>
+
+
+        <!-- Users List -->
+        <ListView fx:id="usersList"
+                  prefHeight="90.0"
+                  AnchorPane.leftAnchor="20.0"
+                  AnchorPane.rightAnchor="20.0"
+                  AnchorPane.topAnchor="390.0"/>
+
+    </children>
+
+</AnchorPane>

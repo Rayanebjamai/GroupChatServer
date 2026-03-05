@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="481.0" prefWidth="217.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.javafxsocketclient.Controller">
+
+    <children>
+
+        <AnchorPane prefHeight="43.0"
+                    style="-fx-background-color: grey;"
+                    AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+
+            <children>
+
+                <Label layoutX="14.0"
+                       layoutY="10.0"
+                       style="-fx-text-fill: white; -fx-font-weight: bold;"
+                       text="Client">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+
+                <!-- ✅ Status Circle -->
+                <Circle fx:id="statusCircle"
+                        radius="6.0"
+                        layoutX="170.0"
+                        layoutY="22.0"
+                        fill="#2ecc71"  />
+
+                <!-- ✅ Status Label -->
+                <Label fx:id="statusLabel"
+                       layoutX="182.0"
+                       layoutY="14.0"
+                       style="-fx-text-fill: white; -fx-font-weight: bold;"
+                       text="Online"/>
+
+            </children>
+
+        </AnchorPane>
+
+        <TextField fx:id="serverText"
+                   prefHeight="26.0"
+                   promptText="Say something..."
+                   style="-fx-background-color: gray; -fx-text-fill: white;"
+                   AnchorPane.leftAnchor="14.0"
+                   AnchorPane.rightAnchor="70.0"
+                   AnchorPane.topAnchor="52.0"/>
+
+        <Button fx:id="sendButton"
+                defaultButton="true"
+                mnemonicParsing="false"
+                onAction="#onSend"
+                prefHeight="26.0"
+                prefWidth="51.0"
+                style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-weight: bold;"
+                text="Send"
+                AnchorPane.rightAnchor="14.0"
+                AnchorPane.topAnchor="52.0"/>
+
+        <ListView fx:id="myListView"
+                  style="-fx-background-color: grey; -fx-text-fill: white;"
+                  AnchorPane.bottomAnchor="9.0"
+                  AnchorPane.leftAnchor="9.0"
+                  AnchorPane.rightAnchor="9.0"
+                  AnchorPane.topAnchor="92.0"/>
+
+    </children>
+</AnchorPane>
